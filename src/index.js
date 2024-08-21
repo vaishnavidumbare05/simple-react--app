@@ -1,17 +1,32 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import App from "./views/app/App"
+import Home from "./views/home/home"
+import About from "./views/about/about"
+import "./index.css"
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//for reading path name
+const currentPath=window.location.pathname;
+
+if(currentPath=="/"){
+  root.render(<Home/>)
+}
+else if(currentPath=="/about"){
+    root.render(<About/>)
+}
+else if(currentPath=="/App"){
+    root.render(<App/>)
+}
+else{
+    root.render(<h1>404 Not Found</h1>)
+}
+
+
+
+// root.render(<div>
+//     {/* render pathname */}
+//     <h1>Pathanme:{currentPath}</h1> 
+    
+// </div>);
+
+
