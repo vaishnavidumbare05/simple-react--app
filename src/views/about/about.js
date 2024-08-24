@@ -7,8 +7,8 @@ function About() {
   return (
     <div>
         <Navbar/>
-        <h1 className='page-title'>about</h1>
-        <img src={AboutImg} className="header-img"/>
+        <h1 className='page-title'>About</h1>
+        <img src={AboutImg} className="about-img"/>
         <Footer/>
         </div>
   )

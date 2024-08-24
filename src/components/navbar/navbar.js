@@ -1,14 +1,18 @@
 import "./Navbar.css"
+import {Link} from "react-router-dom"
+import logo from "./react.png"
 
 function Navbar() {
   return (
    <div className="navbar">
-        <span className="brand-name">Deserts🍫</span>
+        <span className="brand-name"><img src={logo}  height="70px"/></span>
         
     <div className="navbar-links">
-        <a href="/" className="navbar-links">Home</a>
-        <a href="/about" className="navbar-links">About</a>
-        <a href="/App" className="navbar-links">App</a>
+      {/* we can't use anchor tag in react we use link component using react-router-dom library */}
+      {/* anchor and link are similar but for not reload the page we used link but only when we install react-router-dom */}
+        <Link  to="/" className="navbar-links">Home</Link>
+        <Link to="/about" className="navbar-links">About</Link>
+        <Link to="/App" className="navbar-links">App</Link>
 
     </div>
     </div>
